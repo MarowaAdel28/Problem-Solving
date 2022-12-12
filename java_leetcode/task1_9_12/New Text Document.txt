@@ -1,0 +1,24 @@
+link:https://leetcode.com/problems/contains-duplicate/
+
+import java.util.Scanner;
+import java.util.*;  
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        HashMap<Integer,Integer>mp=new HashMap<Integer,Integer>();
+        boolean ifDuble=false;
+        for(int i=0;i<nums.length;i++)
+        {
+            if(!(mp.containsKey(nums[i]))) mp.put(nums[i],0);
+            else mp.replace(nums[i],mp.get(nums[i])+1);
+        }
+        for(int i:mp.keySet())
+        {
+            if(mp.get(i)>=1)
+            {
+                ifDuble=true;
+                break; 
+            }
+        }
+        return ifDuble;
+    }
+}
