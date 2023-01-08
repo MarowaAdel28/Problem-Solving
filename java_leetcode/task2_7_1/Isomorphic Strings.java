@@ -10,7 +10,7 @@ class Solution {
                 if(mp.get(s.charAt(i))!=t.charAt(i)) return false;
             } else if (mp.containsValue(t.charAt(i))) {
 			return false;
-		} else {
+	    } else {
                 mp.put(s.charAt(i),t.charAt(i));
             }
         }
