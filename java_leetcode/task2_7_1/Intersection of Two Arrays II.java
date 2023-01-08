@@ -22,8 +22,7 @@ class Solution {
                     list.add(smallArr[i]);
                     j++;
                     break;
-                } 
-                else if(largeArr[j]>smallArr[i]) {
+                } else if(largeArr[j]>smallArr[i]) {
                     break;
                 }
             }
